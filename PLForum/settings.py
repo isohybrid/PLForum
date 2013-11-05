@@ -66,7 +66,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(HERE, 'collectedstatic')
+STATIC_ROOT = os.path.join(HERE, 'static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -79,7 +79,8 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os.path.join(HERE, 'static/'),
+    "/data/github/PLForum/static",
+    # os.path.join(HERE, 'static/'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -280,7 +281,7 @@ V2EX_TEMPLATE_DIR = os.path.join(lbforum.__path__[0], 'templates_v2ex')
 TEMPLATE_DIRS = (
         os.path.join(HERE, 'templates_plus'),
         os.path.join(HERE, 'templates_v2ex'),
-        os.path.join(HERE, 'templates'),
+        "/data/github/PLForum/templates",
         V2EX_TEMPLATE_DIR,
 )
 

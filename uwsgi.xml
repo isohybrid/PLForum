@@ -1,0 +1,15 @@
+<uwsgi> 
+  <socket>0.0.0.0:8077</socket> 
+  <listen>20</listen> 
+  <daemonize>uwsgi.log</daemonize>
+  <master>true</master> 
+  <pidfile>uwsgi.pid</pidfile> 
+  <processes>2</processes> 
+  <module>django_wsgi</module>
+  <pythonpath>/data/github/PLForum/</pythonpath>
+  <profiler>true</profiler> 
+  <memory-report>true</memory-report> 
+  <enable-threads>true</enable-threads> 
+  <logdate>true</logdate> 
+  <limit-as>6048</limit-as> 
+</uwsgi>

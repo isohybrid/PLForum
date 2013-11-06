@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from views import show_page
+from views import show_page, show_page2
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -19,4 +19,5 @@ urlpatterns = patterns('',
     (r'^', include('lbforum.urls')),
 
     url(r'^page/', show_page),
+    url(r'^page2/', show_page2),
 )

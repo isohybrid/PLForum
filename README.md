@@ -1,6 +1,21 @@
 PLForum
 ===============
 
+task
+1, On main page, show personal info.
+      just like http://getbootstrap.com/examples/carousel/
+
+2, While commentting the other one can comment the base comment just like Baidu Tieba.
+
+3, register
+
+4, Base Frame:
+        Music
+        Photo
+        Forum
+
+===============
+
 Show personal relationship in map on Android/IOS along with Website
 
 ===============

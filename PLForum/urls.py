@@ -10,6 +10,8 @@ from lbforum.accountviews import profile
 
 from views import show_page, show_page2
 
+import plregistration
+
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 admin.autodiscover()
@@ -32,11 +34,12 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-    (r'^attachments/', include('attachments.urls')),
-    (r'^forum/', include('lbforum.urls')),
+    ###(r'^attachments/', include('attachments.urls')),
+    ###(r'^', include('lbforum.urls')),
+    url(r'^forum/', include('plregistration.urls')),
 
     url(r'^page/', show_page),
-    url(r'^', show_page2),
+    url(r'^$', show_page2),
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,13 @@
+Django=1.4.9
+lbforum>=0.9
+django-simple-captcha
+django-registration>=0.8
+South
+PIL
+django-pagination
+postmarkup
+BeautifulSoup
+django-helper
+django-lb-attachments
+django-onlineuer
+django-simple-avatar

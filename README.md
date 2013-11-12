@@ -46,3 +46,9 @@ test
 python manage.py syncdb --noinput --migrate
 
 ----> use this to sync the database
+
+attention   django-registration v0.8
+
+hg clone -r v0.8 http://bitbucket.org/ubernostrum/django-registration/
+
+https://bitbucket.org/ubernostrum/django-registration/src/tip/docs/quickstart.rst

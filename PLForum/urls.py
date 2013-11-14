@@ -8,7 +8,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from registration.views import register
 from lbforum.accountviews import profile
 
-from views import show_page, show_page2
+from views import show_page, show_page2, show_carousel
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -38,7 +38,8 @@ urlpatterns = patterns('',
     url(r'^forum/', include('plregistration.urls')),
 
     url(r'^page/', show_page),
-    url(r'^$', show_page2),
+    url(r'^carousel/', show_page2),
+    url(r'^$', show_carousel),
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

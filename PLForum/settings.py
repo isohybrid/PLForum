@@ -162,6 +162,7 @@ INSTALLED_APPS = (
     'plregistration',
     #captcha
     'captcha',
+    'registration'
 )
 
 #debug

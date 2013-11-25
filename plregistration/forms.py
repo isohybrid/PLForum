@@ -6,7 +6,7 @@ from django import Forms
 from django.utils.translation import ugettext_lazy as _
 
 from registration.forms import RegistrationFormUniqueEmail
-from captcha.fields import CaptchaField
+from captcha.fields import ReCaptchaField
 
 
 
@@ -18,4 +18,4 @@ class RegistrationEmail(RegistrationFormUniqueEmail):
                               widget=forms.TextInput(attrs=attrs_dict),
                               label=_("Username"),
                               error_messages={ 'invalid': _("This value must contain only letters, numbers and underscores.") })
-  captcha = CaptchaField()
+  captcha = ReCaptchaField()

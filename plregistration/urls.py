@@ -6,6 +6,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from registration.views import register
 from lbforum.accountviews import profile
+import captcha
 
 urlpatterns = patterns('',
     url(r'^accounts/register/$',
@@ -16,7 +17,7 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('registration.backends.default.urls')),
 
     (r'^attachments/', include('attachments.urls')),
-    url(r'^captcha/', include('captcha.urls')),
+    #url(r'^captcha/', include('captcha.urls')),
     (r'^', include('lbforum.urls')),
 )
 

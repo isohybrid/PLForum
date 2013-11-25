@@ -160,6 +160,8 @@ INSTALLED_APPS = (
     'debug_toolbar',
     #register
     'plregistration',
+    #captcha
+    'captcha',
 )
 
 #debug
@@ -298,3 +300,7 @@ try:
     CTX_CONFIG.update(CTX_CONFIG_)
 except ImportError, e:
     pass
+
+RECAPTCHA_PUBLIC_KEY = '76wtgdfsjhsydt7r5FFGFhgsdfytd656sad75fgh'
+RECAPTCHA_PRIVATE_KEY = '98dfg6df7g56df6gdfgdfg65JHJH656565GFGFGs'
+REGISTER_USE_SSL = True

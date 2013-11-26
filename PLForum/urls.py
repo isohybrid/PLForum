@@ -12,7 +12,7 @@ from views import show_page, show_page2, show_carousel
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
-admin.autodiscover()
+# admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -23,10 +23,10 @@ urlpatterns = patterns('',
         { 'backend': 'plregistration.backends.simple.PlBackends' },
         name='registration_register'),
     # a problem come out here.
-    url(r'^user/(?P<user_id)\d+)/$', profile, name='user_profile'),
+    ##url(r'^user/(?P<user_id)\d+)/$', profile, name='user_profile'),
 
     (r'^accounts/', include('registration.backends.default.urls')),
-    url(r'^captcha/', include('captcha.urls')),
+    # url(r'^captcha/', include('captcha.urls')),
     # (r'^admin/', include(admin.site.urls)),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
@@ -34,7 +34,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
     (r'^attachments/', include('attachments.urls')),
-    (r'^forum/', include('lbforum.urls')),
+    (r'^', include('lbforum.urls')),
     ###url(r'^forum/', include('plregistration.urls')),
 
     ###url(r'^page/', show_page),

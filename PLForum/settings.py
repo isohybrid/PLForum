@@ -161,7 +161,7 @@ INSTALLED_APPS = (
     #register
     'plregistration',
     #captcha
-    'captcha',
+    #'captcha',
     'registration'
 )
 

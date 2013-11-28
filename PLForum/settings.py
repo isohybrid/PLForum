@@ -162,7 +162,8 @@ INSTALLED_APPS = (
     'plregistration',
     #captcha
     #'captcha',
-    'registration'
+    'registration',
+    'bootstrap_toolkit',
 )
 
 #debug

@@ -11,8 +11,8 @@ from lbforum.accountviews import profile
 from views import show_page, show_page2, show_carousel
 
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -32,14 +32,15 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
+
     (r'^attachments/', include('attachments.urls')),
     (r'^', include('lbforum.urls')),
     ###url(r'^forum/', include('plregistration.urls')),
 
     ###url(r'^page/', show_page),
-    ###url(r'^carousel/', show_page2),
-    ###url(r'^$', show_carousel),
+    ###url(r'^carousel/', show_page2, name="carousel"),
+    url(r'^carousel/', show_carousel, name="carousel"),
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

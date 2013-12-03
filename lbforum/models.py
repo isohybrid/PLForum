@@ -14,11 +14,13 @@ from attachments.models import Attachment
 from onlineuser.models import Online
 
 
+# model 1
 class Config(models.Model):
     key = models.CharField(max_length=255)  # PK
     value = models.CharField(max_length=255)
 
 
+# model 2
 class Category(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(default='')
@@ -35,6 +37,7 @@ class Category(models.Model):
         return self.name
 
 
+# model 3
 class Forum(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=110)
@@ -85,6 +88,7 @@ class Forum(models.Model):
             self.save()
 
 
+# model 4
 class TopicType(models.Model):
     forum = models.ForeignKey(Forum, verbose_name=_('Forum'))
     name = models.CharField(max_length=100)
@@ -95,6 +99,7 @@ class TopicType(models.Model):
         return self.name
 
 
+# model 5
 class TopicManager(models.Manager):
     def get_query_set(self):
         return super(TopicManager, self).get_query_set().filter(hidden=False)
@@ -105,6 +110,7 @@ LEVEL_CHOICES = (
 )
 
 
+# model 6
 class Topic(models.Model):
     forum = models.ForeignKey(Forum, verbose_name=_('Forum'))
     topic_type = models.ForeignKey(TopicType, verbose_name=_('Topic Type'),
@@ -175,6 +181,7 @@ FORMAT_CHOICES = (
 )
 
 
+# model 7
 class Post(models.Model):
     topic = models.ForeignKey(Topic, verbose_name=_('Topic'), related_name='posts')
     posted_by = models.ForeignKey(User)
@@ -245,6 +252,7 @@ class Post(models.Model):
         return '%s?page=%s#p%s' % (topic.get_absolute_url(), page, self.pk)
 
 
+# model 8
 class LBForumUserProfile(models.Model):
     user = models.OneToOneField(User, related_name='lbforum_profile',
                                 verbose_name=_('User'))
